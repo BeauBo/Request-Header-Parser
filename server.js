@@ -3,8 +3,8 @@ const app = express();
 const routes = require('./routes/api');
 const useragent = require('express-useragent');
 
-
-
+app.use(express.static('public'));
+app.set('trust proxy', true);
 //use useragent;
 app.use(useragent.express());
 //initialize routes
